@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Share2, Link as LinkIcon, Check, QrCode } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 
 export default function ShareSection() {
   const [copied, setCopied] = useState(false);
@@ -107,14 +108,18 @@ export default function ShareSection() {
               Explore my portfolio and follow my learning journey.
             </p>
 
-            <div className="w-40 h-40 bg-white/5 border border-white/20 rounded-md flex items-center justify-center relative z-10 backdrop-blur-sm group-hover:border-gold/30 transition-colors">
-              <div className="absolute inset-2 border border-dashed border-white/20 rounded-sm flex items-center justify-center">
-                <QrCode className="w-12 h-12 text-white/20 group-hover:text-gold/50 transition-colors" />
-              </div>
+            <div className="w-40 h-40 bg-white rounded-md flex items-center justify-center relative z-10 p-2 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-500 hover:-translate-y-1">
+              <Image 
+                src="/images/qr-code.png"
+                alt="Scan to share portfolio"
+                width={150}
+                height={150}
+                className="w-full h-full object-contain rounded-sm"
+              />
             </div>
             
-            <div className="mt-6 text-xs text-gold/40 tracking-[0.2em] uppercase font-semibold relative z-10">
-              QR Code Placeholder
+            <div className="mt-6 text-xs text-gold/80 tracking-[0.2em] uppercase font-semibold relative z-10">
+              SCAN TO SHARE
             </div>
           </motion.div>
 
