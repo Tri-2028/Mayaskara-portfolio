@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-charcoal: #0a0a0a;
+  --color-graphite: #1a1a1a;
+  --color-ivory: #fdfbf7;
+  --color-gold: #d4af37;
+  --color-goldAccent: #ebd177;
+  --background: 0 0% 4%;
+  --foreground: 48 40% 98%;
+}
+
+@layer base {
+  body {
+    @apply bg-charcoal text-ivory antialiased selection:bg-gold/30 selection:text-goldAccent;
+  }
+}
+
+@layer utilities {
+  .chess-grid {
+    background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.015) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: pan-grid 60s linear infinite;
+  }
+  
+  @keyframes pan-grid {
+    0% { background-position: 0 0; }
+    100% { background-position: 60px 60px; }
+  }
+
+  @keyframes draw {
+    to { stroke-dashoffset: 0; }
+  }
+
+  .animate-draw-path {
+    animation: draw 2s ease-in-out forwards;
+  }
+
+  .animate-draw-path-delayed {
+    animation: draw 2s ease-in-out 0.5s forwards;
+  }
+  
+  .glass-card {
+    @apply bg-[#121212] border border-gold/10 shadow-lg transition-all duration-500 hover:border-gold/30 hover:-translate-y-1 hover:shadow-gold/5;
+  }
+  
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-goldAccent via-gold to-yellow-600;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
