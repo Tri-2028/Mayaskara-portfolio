@@ -50,10 +50,9 @@ export default function ChessSection() {
             <svg className="absolute inset-0 w-full h-full z-20 pointer-events-none stroke-gold drop-shadow-[0_0_10px_rgba(212,175,55,0.8)]" fill="none" viewBox="0 0 100 100" preserveAspectRatio="none">
               <motion.path
                 d="M 18.75 81.25 L 31.25 56.25 L 56.25 43.75 L 81.25 18.75"
-                strokeWidth="0.5"
-                strokeDasharray="100"
-                initial={{ strokeDashoffset: 100 }}
-                whileInView={{ strokeDashoffset: 0 }}
+                strokeWidth="1"
+                initial={{ pathLength: 0, opacity: 0 }}
+                whileInView={{ pathLength: 1, opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 2.5, ease: "easeInOut" }}
               />
