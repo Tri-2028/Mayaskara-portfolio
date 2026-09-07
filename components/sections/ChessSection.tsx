@@ -33,7 +33,7 @@ export default function ChessSection() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, margin: "-100px" }}
+            viewport={{ once: true, margin: "0px" }}
             transition={{ duration: 0.8 }}
             className="relative aspect-square w-full max-w-lg mx-auto border border-white/10 bg-[#121212] p-4 lg:p-8 shadow-2xl overflow-hidden rounded-sm"
           >
@@ -53,7 +53,7 @@ export default function ChessSection() {
                 strokeWidth="1"
                 initial={{ pathLength: 0, opacity: 0 }}
                 whileInView={{ pathLength: 1, opacity: 1 }}
-                viewport={{ once: true, margin: "-100px" }}
+                viewport={{ once: true, margin: "0px" }}
                 transition={{ duration: 2.5, ease: "easeInOut" }}
               />
             </svg>
@@ -66,7 +66,7 @@ export default function ChessSection() {
                 left: ["13.75%", "26.25%", "51.25%", "76.25%"], 
                 top: ["76.25%", "51.25%", "38.75%", "13.75%"] 
               }}
-              viewport={{ once: true, margin: "-100px" }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ duration: 2.5, ease: "easeInOut", times: [0, 0.33, 0.66, 1] }}
             >
               <svg viewBox="0 0 100 100" className="w-full h-full fill-current">
@@ -83,7 +83,7 @@ export default function ChessSection() {
                   key={item.step}
                   initial={{ opacity: 0, x: 10 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
+                  viewport={{ once: true, margin: "0px" }}
                   transition={{ delay: item.delay * 0.6, duration: 0.6 }}
                   className="flex items-center gap-6"
                 >
@@ -100,7 +100,7 @@ export default function ChessSection() {
             <motion.blockquote
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: true, margin: "-50px" }}
+              viewport={{ once: true, margin: "0px" }}
               transition={{ delay: 2.2, duration: 1 }}
               className="relative pl-8 border-l-2 border-gold/50"
             >

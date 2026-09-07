@@ -110,7 +110,7 @@ export default function ShareSection() {
 
             <div className="w-40 h-40 bg-white rounded-md flex items-center justify-center relative z-10 p-2 group-hover:shadow-[0_0_20px_rgba(212,175,55,0.3)] transition-all duration-500 hover:-translate-y-1">
               <Image 
-                src="/images/qr-code.png"
+                src="/images/share-code.png"
                 alt="Scan to share portfolio"
                 width={150}
                 height={150}
